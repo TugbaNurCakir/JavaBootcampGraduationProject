@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" href="../static/frontend-par/style.css">
+    </head>
+    <body>
+        <div class="img-container">
+        <img src="../static/frontend-par/images/logo.png" alt="welcome-image">
+        </div>
+        <div class="center-p title">REGISTER</div><br>
+        <div class="form-center">
+        <form method="GET" action="http://localhost:8081/add" th:object="${userDTO}">
+            <label for="userName">Username</label><br>
+            <input type="text" id="userName" th:field="*{userName}"><br>
+            <label for="userPassword">Password</label><br>
+            <input type="password" id="userPassword" th:field="*{userPassword}"><br>
+            <input type="submit" value="Submit" class="button">
+          </form>
+
+        </div>
+    </body>
+</html>
